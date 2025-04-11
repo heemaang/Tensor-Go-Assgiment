@@ -49,5 +49,111 @@ A full-stack application for automating invoice reminders using Zapier, with sec
 - **Auth**: Passport.js (Google OAuth)
 - **Automation**: Zapier Webhooks
 
---
+---
 
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/invoice-reminder-zapier.git
+cd invoice-reminder-zapier
+```
+
+### 2. Backend Setup
+
+```bash
+cd server
+npm install
+```
+
+Create `.env` file inside `server`:
+
+```env
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/invoicer
+SESSION_SECRET=your-session-secret
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+ZAPIER_WEBHOOK_URL=https://hooks.zapier.com/hooks/catch/your-webhook-id
+```
+
+Start server:
+
+```bash
+npm start
+```
+
+### 3. Frontend Setup
+
+```bash
+cd ../client
+npm install
+```
+
+Create `.env` file inside `client`:
+
+```env
+VITE_GOOGLE_CLIENT_ID=your-google-client-id
+```
+
+Run frontend:
+
+```bash
+npm run dev
+```
+
+Now visit: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## ⚡️ Zapier Integration Setup
+
+1. Go to [Zapier](https://zapier.com)
+
+2. Create a new Zap:
+   - **Trigger**: Webhooks by Zapier → Catch Hook
+   - **Action**: Gmail / Mailjet → Send Email
+
+3. Copy the webhook URL and paste it in your `.env`:
+
+```env
+ZAPIER_WEBHOOK_URL=https://hooks.zapier.com/hooks/catch/your-webhook-id
+```
+
+4. Add filter: `status = due`
+
+5. Set dynamic fields: `recipient`, `amount`, `due date`
+
+---
+
+## 🔄 App Flow
+
+- User logs in using Google OAuth
+- A sample invoice is auto-seeded if none exists
+- User sees a dashboard with a list of due invoices
+- Clicking "Trigger Reminder" calls the backend → Zapier
+- Zapier sends a dynamic email reminder
+
+---
+
+## 📡 API Endpoints
+
+| Method | Endpoint             | Description                           |
+|--------|----------------------|---------------------------------------|
+| GET    | /api/invoices        | Fetch all invoices                    |
+| GET    | /api/me              | Get logged-in user info               |
+| POST   | /api/init-user       | Create sample invoice for user        |
+| POST   | /api/trigger-zapier  | Send invoice to Zapier webhook        |
+| GET    | /logout              | Logout and destroy session            |
+
+---
+
+## 🧪 Testing Tools
+
+- ✅ **Postman**: for backend API testing
+- ✅ **Browser DevTools**: to check cookies & sessions
+- ✅ **Zapier Task History**: to confirm email delivery
+- ✅ **Console logs**: for frontend/backend feedback
+
+---
