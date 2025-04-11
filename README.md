@@ -5,6 +5,29 @@
 **Email:** heemaang.saxena18@gmail.com
 
 ---
+## 🖼️ Screenshots
+
+### 🏠 Home Page  
+![Home](./ScreenShots/Home.jpg)
+
+### 🔐 Google Auth  
+![Google Auth](./ScreenShots/Googleauth.jpg)
+
+### 📊 Invoice Dashboard  
+![Invoice Dashboard](./ScreenShots/Invoice%20dashboard%20.jpg)
+
+### ⚙️ Zapier Trigger  
+![Zapier](./ScreenShots/zapier.jpg)
+
+### 📧 Zapier Email Logic  
+![Zapier Email](./ScreenShots/zapieremail.jpg)
+
+### 🔍 Zapier Filter Logic  
+![Zapier Filter](./ScreenShots/ScreenShots/zapierfilter.jpg)
+
+### 🧠 Zapier Overall Logic  
+![Zapier Logic](./ScreenShots/zapvierlogic.jpg)
+
 
 ## ✅ Requirement Fulfillment
 
