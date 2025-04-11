@@ -1,0 +1,144 @@
+/* Base HTML and Body Styling */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(to right, #eef2ff, #ffffff);
+  font-family: Arial, sans-serif;
+  display: flex;              /* ✅ enable flex layout */
+  justify-content: center;    /* ✅ center horizontally */
+  align-items: center; 
+}
+.summary-text{
+  color: black;
+}
+/* Centered Invoice Wrapper Box */
+.invoice-wrapper {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center children */
+}
+
+/* Header Section */
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.invoice-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #6a0dad;
+}
+
+.welcome-text {
+  margin-top: 5px;
+  color: #333;
+}
+
+/* Buttons */
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+.seed-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.seed-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Notification Messages */
+.message {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Invoice Cards Grid */
+.invoice-grid {
+  display: grid;
+  gap: 20px;
+  margin-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Individual Card Styling */
+.invoice-card {
+  background: linear-gradient(135deg, #f5e9ff, #ffffff);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(106, 13, 173, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.invoice-card:hover {
+  transform: translateY(-4px);
+}
+
+.invoice-card h3 {
+  color: #6a0dad;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.invoice-card p {
+  color: #333;
+  margin: 4px 0;
+}
+
+/* Trigger Reminder Button */
+.trigger-btn {
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.trigger-btn:hover {
+  background-color: #5801a7;
+}
