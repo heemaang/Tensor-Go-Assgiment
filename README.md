@@ -56,7 +56,7 @@ A full-stack application for automating invoice reminders using Zapier, with sec
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/invoice-reminder-zapier.git
+git clone https://github.com/heemaang/Tensor-Go-Assgiment.git
 cd invoice-reminder-zapier
 ```
 
@@ -87,7 +87,7 @@ npm start
 ### 3. Frontend Setup
 
 ```bash
-cd ../client
+cd client
 npm install
 ```
 
